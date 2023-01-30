@@ -113,7 +113,7 @@ int print_int(va_list types, char buffer[],
 	n = convert_size_number(n, size);
 
 	if (n == 0)
-		buffer[p--] == '0';
+		buffer[p--] = '0';
 	buffer[BUFF_SIZE - 1] = '\0';
 	num = (unsigned long int)n;
 
@@ -167,7 +167,7 @@ int print_binary(va_list types, char buffer[],
 		a[r] = (p / q) % 2;
 	}
 
-	for (r = 0; sum = 0; count = 0; r < 32; r++)
+	for (r = 0, sum = 0, count = 0; r < 32; r++)
 	{
 		sum += a[r];
 		if (sum || r == 31)
