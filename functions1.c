@@ -20,7 +20,7 @@ int print_unsigned(va_list types, char buffer[],
 	num = convert_size_unsgnd(num, size);
 
 	if (num == 0)
-		bufferr[p--] = '0';
+		buffer[p--] = '0';
 
 	buffer[BUFF_SIZE - 1] = '\0';
 
